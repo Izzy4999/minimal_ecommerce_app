@@ -7,28 +7,28 @@ class Shop extends ChangeNotifier {
     const Product(
       description: "A image of hown here in the pic",
       imagePath:
-          "https://pixabay.com/illustrations/flamingo-run-shoes-feathers-8749724/",
+          "https://cdn.pixabay.com/photo/2024/05/09/04/11/flamingo-8749724_1280.jpg",
       name: "Product 1",
       price: 254,
     ),
     const Product(
       description: "A image of hown here in the pic",
       imagePath:
-          "https://pixabay.com/vectors/shoes-footwear-sneakers-fashion-153310/",
+          "https://cdn.pixabay.com/photo/2013/07/12/18/20/shoes-153310_1280.png",
       name: "Product 2",
       price: 254,
     ),
     const Product(
       description: "A image of hown here in the pic",
       imagePath:
-          "https://pixabay.com/photos/oxford-shoes-leather-shoes-6078993/",
+          "https://cdn.pixabay.com/photo/2021/03/08/12/31/oxford-shoes-6078993_1280.jpg",
       name: "Product 3",
       price: 254,
     ),
     const Product(
       description: "A image of hown here in the pic",
       imagePath:
-          "https://pixabay.com/illustrations/shoes-footwear-pumps-fashion-heels-7809732/",
+          "https://cdn.pixabay.com/photo/2023/02/23/22/45/shoes-7809732_1280.png",
       name: "Product 4",
       price: 254,
     ),
