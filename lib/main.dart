@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minimal_ecommerce_app/models/shop.dart';
 import 'package:minimal_ecommerce_app/pages/cart_page.dart';
 import 'package:minimal_ecommerce_app/pages/intro_page.dart';
 import 'package:minimal_ecommerce_app/pages/shop_page.dart';
@@ -6,8 +7,15 @@ import 'package:minimal_ecommerce_app/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-    create: (context) => ThemeProvider(),
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (context) => ThemeProvider(),
+      ),
+      ChangeNotifierProvider(
+        create: (context) => Shop(),
+      ),
+    ],
     child: const MyApp(),
   ));
 }

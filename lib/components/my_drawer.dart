@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:minimal_ecommerce_app/components/my_list_tile.dart';
+import 'package:minimal_ecommerce_app/themes/theme.dart';
+import 'package:minimal_ecommerce_app/themes/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -34,9 +37,21 @@ class MyDrawer extends StatelessWidget {
               MyListTile(
                 icon: Icons.shopping_cart,
                 text: "Cart",
-                onTap:  () {
+                onTap: () {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, "/cart-page");
+                },
+              ),
+              MyListTile(
+                icon: Provider.of<ThemeProvider>(context).themeData == lightMode
+                    ? Icons.dark_mode
+                    : Icons.light_mode,
+                text: Provider.of<ThemeProvider>(context).themeData == lightMode
+                    ? "Dark mode"
+                    : " Light mode",
+                onTap: () {
+                  Provider.of<ThemeProvider>(context, listen: false)
+                      .toggleTheme();
                 },
               ),
             ],
@@ -46,7 +61,7 @@ class MyDrawer extends StatelessWidget {
             child: MyListTile(
               icon: Icons.logout,
               text: "Logout",
-              onTap: () => Navigator.pushNamed(context, "/shop-page"),
+              onTap: () => Navigator.pushNamed(context, "/intro-page"),
             ),
           ),
         ],

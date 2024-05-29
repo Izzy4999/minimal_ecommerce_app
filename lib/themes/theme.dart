@@ -16,6 +16,7 @@ ThemeData darkMode = ThemeData(
     surface: Colors.grey.shade900,
     primary: Colors.grey.shade800,
     secondary: Colors.grey.shade700,
+    inversePrimary: Colors.grey.shade100,
   ),
   dividerTheme: const DividerThemeData(color: Colors.transparent),
 );
